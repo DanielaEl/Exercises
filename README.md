@@ -1,2 +1,7 @@
-# Exercises
-Just for some practice and stuff
+//Just testing how this works
+#include "std_lib_facilities.h"
+int main()
+{
+  cout<<"Hello, World!\n";
+  return 0;
+}
