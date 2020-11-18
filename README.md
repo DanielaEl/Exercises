@@ -1,7 +1,1 @@
-//Just testing how this works
-#include "std_lib_facilities.h"
-int main()
-{
-  cout<<"Hello, World!\n";
-  return 0;
-}
+I'm in pain.<3
