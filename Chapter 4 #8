@@ -9,11 +9,17 @@ int main()
 {
     cout<<"Put in the square you want to see.\n";
     int current_sqr;
-    int rice_nw;
+    int rice_nw=1;
     while(cin>>current_sqr){
-        if(current_sqr<=0){
-            cout<<"This is not a number that can be used.\n";}
-        if 
+                if(current_sqr<=0){
+            cout<<"This is not a number that can be used.\n";
+            break;}
+        int i;
+        i++;
+        current_sqr=current_sqr*2;
+        cout<<"Square: "<<i<<"\nRice: "<<rice_nw;
+        if(i==current_sqr){
+            break;}
     }
+    return 0;
 }
-//finish it
