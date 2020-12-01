@@ -10,16 +10,14 @@ int main()
     cout<<"Put in the square you want to see.\n";
     int current_sqr;
     int rice_nw=1;
-    while(cin>>current_sqr){
-                if(current_sqr<=0){
+    cin>>current_sqr;
+    for(int i=1;i<=current_sqr;i++){
+            if(current_sqr<=0){
             cout<<"This is not a number that can be used.\n";
             break;}
-        int i;
-        i++;
-        current_sqr=current_sqr*2;
-        cout<<"Square: "<<i<<"\nRice: "<<rice_nw;
-        if(i==current_sqr){
-            break;}
+        rice_nw=rice_nw*2;
+            if(i==1){
+            rice_nw=1;}
+            else if(i==current_sqr){
+                cout<<"Square: "<<current_sqr<<"\nRice: "<<rice_nw<<'\n';}    //limit is 31 squares
     }
-    return 0;
-}
