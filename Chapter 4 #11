@@ -5,5 +5,34 @@
 #include <cmath>
 using namespace std;
 
+
+int check(int x,vector<int>&primes,bool isDivisable){ 
+    if(x%primes[0]!=0){
+        isDivisable=false;}
+    else if(x%primes[1]!=0){
+        isDivisable=false;}
+    return isDivisable;
+}
+
+
+
 int main()
 {
+    cout<<"Why won't this work!?\n";
+    for(int x=1; x<=100; x++){
+        cout<<"Please work\n";
+        bool isDivisable=true;
+        vector<int>primes;
+        primes[0]=2;
+        check(x,primes,true);
+        if(isDivisable==false){
+            primes.push_back(x);
+            cout<<x<<", ";}
+        else if(isDivisable==true){
+            cout<<'\n';}
+        else{
+            cout<<"Something is wrong...\n";} 
+    }
+    cout<<"I wanna cry.";
+}
+
