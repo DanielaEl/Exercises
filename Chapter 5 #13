@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+int main{
+    vector<int>primes;
+    primes[0]=2
+    for(int x=2;x<=100;x++){
+        bool not_prime=false;
+        if(x%2==0){
+            not_prime=true;}
+        if(x==3){
+            primes.push_back(3);}
+        if(x%3==0){
+            not_prime=true;}
+        if(x%4==0){
+            not_prime=true;}        
+        if(x==5){
+            primes.push_back(5);}
+        if(x%5==0){
+            not_prime=true;}
+        if(x%6==0){
+            not_prime=true;}
+        if(x==7){
+            primes.push_back(7);}
+        if(x%6==0){
+            not_prime=true;}
+        if(not_prime==false){
+            prime.push_back(x);
+            cout<<x<<", ";}
+    }
+}
+        
