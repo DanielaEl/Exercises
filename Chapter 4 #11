@@ -7,27 +7,32 @@ using namespace std;
 
 bool isDivisable;
 
-bool check(int x){ 
-    if(x%2!=0){
-        isDivisable=false;}
-    else if(x%3!=0){
-        isDivisable=false;}
-    return isDivisable;
+bool prime_check(int x){ 
+    if(x%2==0){
+        return true;}
+    else if(x%3==0){
+        return true;}
+    else if(x%5==0){
+        return true;}
+    return false;
 }
 
 
 int main()
 {
-    vector<int>primes;
-    primes[0]=2;
+    vector<int>primes{2, 3, 5};
     for(int x=1; x<=100; x++){
-        check(x);
+        isDivisable=prime_check(x);
         if(isDivisable==false){
             primes.push_back(x);
             cout<<x<<", ";}
-        else if(isDivisable==true){
-            cout<<' ';}
-        else{
-            cout<<'\n';} 
+        }
+    cout << "Found prime numbers between 1 and 100: \n";
+    for (int nPrime : primes)      //Don't know what this line of code does...
+    {
+        cout << nPrime << " ";
     }
+    cout << '\n';
+
+    return 0;
 }
