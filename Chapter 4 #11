@@ -3,11 +3,10 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
-using namespace std;
 
 bool isDivisable;
 
-bool prime_check(int x){ 
+bool prime_check(std::int x, std::vector<int>primes){ 
     if(x%2==0){
         return true;}
     else if(x%3==0){
@@ -20,19 +19,19 @@ bool prime_check(int x){
 
 int main()
 {
-    vector<int>primes{2, 3, 5};
+    std::vector<int>primes{2, 3, 5};
     for(int x=1; x<=100; x++){
         isDivisable=prime_check(x);
         if(isDivisable==false){
             primes.push_back(x);
-            cout<<x<<", ";}
+            std::cout<<x<<", ";}
         }
-    cout << "Found prime numbers between 1 and 100: \n";
+    std::cout << "Found prime numbers between 1 and 100: \n";
     for (int nPrime : primes)      //Don't know what this line of code does...
     {
-        cout << nPrime << " ";
+        std::cout << nPrime << " ";
     }
-    cout << '\n';
+    std::cout << '\n';
 
     return 0;
 }
