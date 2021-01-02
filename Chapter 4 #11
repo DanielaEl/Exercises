@@ -6,7 +6,7 @@
 
 bool isDivisable;
 
-bool prime_check(std::int x, std::vector<int>primes){ 
+bool prime_check(int x){ 
     if(x%2==0){
         return true;}
     else if(x%3==0){
@@ -23,8 +23,7 @@ int main()
     for(int x=1; x<=100; x++){
         isDivisable=prime_check(x);
         if(isDivisable==false){
-            primes.push_back(x);
-            std::cout<<x<<", ";}
+            primes.push_back(x);}
         }
     std::cout << "Found prime numbers between 1 and 100: \n";
     for (int nPrime : primes)      //Don't know what this line of code does...
@@ -32,6 +31,6 @@ int main()
         std::cout << nPrime << " ";
     }
     std::cout << '\n';
-
+    
     return 0;
 }
