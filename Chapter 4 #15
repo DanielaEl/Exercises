@@ -1,1 +1,47 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+
+bool isDivisable;
+
+bool prime_check(int x){ 
+    if(x==2||x==3||x==5){
+        return false;}
+    if(x%2==0){
+        return true;}
+    else if(x%3==0){
+        return true;}
+    else if(x%5==0){
+        return true;}
+    else if(x%11==0){
+        return true;}
+    return false;
+}
+
+
+int main()
+{
+    int n;
+    int f=0;
+    std::cout<<"Please enter how many primes you would like to see.\n";
+    std::cin>>n;
+    std::vector<int>primes{2};
+    while(n<=f){
+        isDivisable=prime_check(f);
+        if(isDivisable==false){
+                primes.push_back(f);
+                f++;
+                }
+    }
+    std::cout << "Found the first "<<n<<" prime numbers: \n";
+    for (int nPrime : primes)      //Don't know what this line of code does...
+    {
+        std::cout << nPrime << " ";
+    }
+    std::cout << '\n';
+    
+    return 0;
+}
 
