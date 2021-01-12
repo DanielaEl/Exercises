@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -8,8 +7,8 @@
 std::vector<std::string>names;
 std::vector<int>scores;
 
-bool dup(string cn;std::vector<std::string>&names){
-    for(string lol: names){
+bool dup(std::string cn,std::vector<std::string>&names){
+    for(std::string lol: names){
         if(cn==lol){
             return true;}
     }
@@ -19,14 +18,15 @@ bool dup(string cn;std::vector<std::string>&names){
 int main(){
     std::string cn;
     int cs;
-    bool bad;
-    bool Bbad;
+    bool bad=false;
+    bool Bbad=false;
     std::cout<<"Please enter a name followed by a score. (With a space preferably)\n";
     while(bad==false){
     std::cin>>cn>>cs;
     if(Bbad=dup(cn,names){
+        std::cout<<"Woops! Seems like you entered the same name by mistake. Here is the list:\n";
         bad=true;
-        std::cout<<"Woops! Seems like you entered the same name by mistake. Here is the list:\n";}
+        }
     else{
         names.push_back(cn);
         scores.push_back(cs);
