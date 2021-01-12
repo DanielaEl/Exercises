@@ -33,7 +33,7 @@ int main(){
         std::cout<<cn<<' '<<cs<<'\n';}
     }
     
-    for(int size2=0;size2<=names.size();size2++){
+    for(int size2=0;size2<names.size();++size2){
         std::cout<<'['<<names[size2]<<"] = "<<scores[size2]<<'\n';}
 
         return 0;
