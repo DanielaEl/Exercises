@@ -1,1 +1,56 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cmath>
 
+std::vector<std::string>names;
+std::vector<int>scores;
+
+bool dup(std::string cn,std::vector<std::string>&names){
+    for(std::string lol: names){
+        if(cn==lol){
+            return true;}
+    }
+    return false;
+}
+
+void find(std::string cn, std::vector<std::string>&names, std::vector<int>&scores){
+    for(int lol;lol<names.size();lol++){
+        if(cn==names[lol]){
+            std::cout<<"[ "<<cn<<" ] == "<<scores[lol]<<'\n';
+            return;}
+        else{
+            std::cout<<"Apologies, I was unable to find a score for that name.\n";
+            return;}
+    }
+    return;
+}
+
+    
+int main(){
+    std::string cn;
+    int cs;
+    bool bad=false;
+    bool Bbad=false;
+    std::cout<<"Please enter a name followed by a score. (With a space preferably)\n";
+    while(bad==false){
+    std::cin>>cn>>cs;
+    if(Bbad=dup(cn,names)){
+        std::cout<<"Woops! Seems like you entered the same name by mistake. Here is the list:\n";
+        bad=true;
+        }
+    else{
+        names.push_back(cn);
+        scores.push_back(cs);}
+    }
+    
+    for(int size2=0;size2<names.size();++size2){
+        std::cout<<'['<<names[size2]<<"] = "<<scores[size2]<<'\n';}
+        
+    std::cout<<"Please enter the name you would like to see and it shall output the corrisponding score.\n";
+    while(std::cin>>cn){
+        find(cn,names,scores);
+        return 0;
+    }
+}
