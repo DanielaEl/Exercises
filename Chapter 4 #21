@@ -1,0 +1,60 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+
+std::vector<std::string>names;
+std::vector<int>scores;
+
+bool dup(std::string cn,std::vector<std::string>&names){
+    for(std::string lol: names){
+        if(cn==lol){
+            return true;}
+    }
+    return false;
+}
+
+void score(int cs, std::vector<std::string>&names, std::vector<int>&scores){
+    bool tobe=false;
+    for(int lol;lol<scores.size();lol++){
+        if(cs==scores[lol]){
+            std::cout<<"[ "<<names[lol]<<" ]== "<<scores[lol]<<'\n';
+            tobe=true;}
+    }
+    if(tobe==false){
+        std::cout<<"This score could not be matched to any names.\n";}
+    return;
+}
+    
+
+int main(){
+    std::string cn;
+    int cs;
+    bool bad=false;
+    bool Bbad=false;
+    std::cout<<"Please enter a name followed by a score. (With a space preferably)\n";
+    while(bad==false){
+    std::cin>>cn>>cs;
+    if(names.size()!=scores.size()){
+        std::cout<<"There is a score or name missing.";}
+    else if(Bbad=dup(cn,names)){
+        std::cout<<"Woops! Seems like you entered the same name by mistake. Here is the list:\n";
+        bad=true;
+        }
+    else{
+        names.push_back(cn);
+        scores.push_back(cs);
+        }
+    }
+    
+    for(int size2=0;size2<names.size();++size2){
+        std::cout<<'['<<names[size2]<<"] = "<<scores[size2]<<'\n';}
+        
+    std::cout<<"Please enter a score and I will give you all the names that match that score.\n";
+    while(std::cin>>cs){
+        score(cs,names,scores);
+        return 0;
+    }
+
+}
