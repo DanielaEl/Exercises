@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+
+double ctok(double c)
+{
+    int k=c+273.15;
+    return int;
+}
+
+int main()
+{
+    double c=0;
+    cin>>d;
+    double k=ctok("c");
+    Cout<<k<<endl;
+}
+
+
+//Corrected? I quess
+
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+
+double ctok(double c)
+{
+    double k=c+273.15;
+    return k;
+}
+
+int main()
+{
+    double c=0;
+    std::cin>>c;
+    double k=ctok(c);
+    std::cout<<k<<std::endl;
+}
